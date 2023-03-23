@@ -1,0 +1,14 @@
+{
+  "name": "automacao-de-testes-e2e-alura",
+  "version": "1.0.0",
+  "description": "Criando um projeto com Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Gabriela Ambos",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.1.1"
+  }
+}
