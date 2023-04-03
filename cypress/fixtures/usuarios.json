@@ -1,0 +1,20 @@
+[
+    {
+        "email": "tommy.oliver@teste.com",
+        "fullname": "Tomas Otavio Oliver",
+        "userName": "tommy_oliver",
+        "password": "tommy@123"
+    },
+    {
+        "email": "anakin.skywalker@teste.com",
+        "fullname": "Anakin Rocambole Skywalker",
+        "userName": "anakin_rocambole",
+        "password": "rocambole@123"
+    },
+    {
+        "email": "naksu.mu-deok@teste.com",
+        "fullname": "Naksu Mu-deok",
+        "userName": "naksumudeok",
+        "password": "naksu@123"
+    }
+]

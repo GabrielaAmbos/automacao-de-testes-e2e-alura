@@ -28,4 +28,35 @@ describe('Login e registro de usuarios alura pic', () => {
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
     })
+
+    it('fazer login de usuario valido', () => {
+        cy.login('flavio', '123')
+        cy.contains('a', '(Logout)').should('be.visible');
+    })
+
+    it('fazer login de usuario invalido', () => {
+        cy.login('gabriela', '1234')
+        cy.on ('window:alert', (str) => {
+            expect(str).to.equal('Invalid user name or password')
+        })
+    })
+
+    const usuarios = require('../../fixtures/usuarios.json');
+    usuarios.forEach(usuario => {
+
+        it.only(`registra novo usuario ${usuario.userName} `, () => {
+            cy.contains('a', 'Register now').click();
+            cy.contains('button', 'Register').click();
+            cy.get('input[formcontrolname="email"]').type(usuario.email);
+            cy.get('input[formcontrolname="fullName"]').type(usuario.fullname);
+            cy.get('input[formcontrolname="userName"]').type(usuario.userName);
+            cy.get('input[formcontrolname="password"]').type(usuario.password);
+            cy.contains('button', 'Register').click();
+        })
+    })
+
+    
+
+
+   
 })
